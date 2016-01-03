@@ -1,6 +1,6 @@
 # app-with-midje
 
-A Leiningen template for FIXME.
+[![Clojars Project](https://img.shields.io/clojars/v/app-with-midje/lein-template.svg)]
 
 ## Usage
 
