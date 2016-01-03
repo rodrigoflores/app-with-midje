@@ -6,24 +6,23 @@
 
 (def render (renderer "app-with-midje"))
 
-(defn app-with-midje
-  "FIXME: write documentation"
-  [name]
+(def lib-versions {:schema "1.8.3"
+                   :midje  "1.0.4"})
+
+(defn app-with-midje [name]
   (let [sanitized (name-to-path name)
         main (multi-segment sanitized)
         nested-dirs (name-to-path main)
         repl-ns (multi-segment sanitized "repl")
         repl-file (name-to-path repl-ns)
-        midje-version "1.8.3"
-        schema-version "1.0.4"
         data {:name name
               :sanitized sanitized
               :nested-dirs nested-dirs
               :repl-ns repl-ns
               :repl-file repl-file
               :main main
-              :midje-version midje-version
-              :schema-version schema-version
+              :midje-version (:schema lib-versions)
+              :schema-version (:midje lib-versions)
               :year (-> (jt/local-date)
                         jt/year
                         (.getValue))}]
