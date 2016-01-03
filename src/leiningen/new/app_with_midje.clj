@@ -11,15 +11,19 @@
   (let [sanitized (name-to-path name)
         main (multi-segment sanitized)
         nested-dirs (name-to-path main)
+        repl-ns (multi-segment sanitized "repl")
+        repl-file (name-to-path repl-ns)
         data {:name name
               :sanitized sanitized
               :nested-dirs nested-dirs
+              :repl-ns repl-ns
+              :repl-file repl-file
               :main main}]
-    (println nested-dirs)
     (main/info "Generating fresh 'lein new' app-with-midje project.")
     (->files data
              ["project.clj" (render "project.clj" data)]
              [".gitignore" (render "gitignore" data)]
              ["README" (render "README.md" data)]
              ["test/{{nested-dirs}}_test.clj" (render "test_core.clj" data)]
+             ["src/{{repl-file}}.clj" (render "repl.clj" data)]
              ["src/{{nested-dirs}}.clj" (render "core.clj" data)])))

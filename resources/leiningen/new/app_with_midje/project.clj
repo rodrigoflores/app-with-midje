@@ -6,7 +6,7 @@
   :dependencies [[org.clojure/clojure "1.7.0"]]
   :main ^:skip-aot {{main}}
   :target-path "target/%s"
-  :repl-options {}
+  :repl-options {:init-ns {{repl-ns}}}
   :profiles {:uberjar {:aot :all}
              :dev {:dependencies [[midje "1.8.2"]]}})
 
