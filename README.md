@@ -1,6 +1,6 @@
 # app-with-midje
 
-[![Clojars Project](https://img.shields.io/clojars/v/app-with-midje/lein-template.svg)]
+![Clojars Project](https://img.shields.io/clojars/v/app-with-midje/lein-template.svg)
 
 ## Usage
 
