@@ -13,12 +13,16 @@
         nested-dirs (name-to-path main)
         repl-ns (multi-segment sanitized "repl")
         repl-file (name-to-path repl-ns)
+        midje-version "1.8.3"
+        schema-version "1.0.4"
         data {:name name
               :sanitized sanitized
               :nested-dirs nested-dirs
               :repl-ns repl-ns
               :repl-file repl-file
-              :main main}]
+              :main main
+              :midje-version midje-version
+              :schema-version schema-version}]
     (main/info "Generating fresh 'lein new' app-with-midje project.")
     (->files data
              ["project.clj" (render "project.clj" data)]
