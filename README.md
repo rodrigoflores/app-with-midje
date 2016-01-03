@@ -4,11 +4,10 @@ A Leiningen template for FIXME.
 
 ## Usage
 
-FIXME
+A Clojure template with Midje and Schema
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Rodrigo Flores.
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+You can check the license [here](LICENSE)

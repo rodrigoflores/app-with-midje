@@ -2,6 +2,11 @@
 
 FIXME: description
 
+## TODO ##
+
+- [ ] Add my (or my company) name on LICENSE;
+- [ ] Choose a license (Default Apache V2);
+
 ## Installation
 
 Download from http://example.com/FIXME.
@@ -11,10 +16,6 @@ Download from http://example.com/FIXME.
 FIXME: explanation
 
     $ java -jar {{name}}-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
 
 ## Examples
 
