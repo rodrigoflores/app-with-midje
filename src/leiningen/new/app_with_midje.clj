@@ -1,6 +1,7 @@
 (ns leiningen.new.app-with-midje
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files
                                              multi-segment]]
+            [java-time :as jt]
             [leiningen.core.main :as main]))
 
 (def render (renderer "app-with-midje"))
@@ -22,12 +23,16 @@
               :repl-file repl-file
               :main main
               :midje-version midje-version
-              :schema-version schema-version}]
+              :schema-version schema-version
+              :year (-> (jt/local-date)
+                        jt/year
+                        (.getValue))}]
     (main/info "Generating fresh 'lein new' app-with-midje project.")
     (->files data
              ["project.clj" (render "project.clj" data)]
              [".gitignore" (render "gitignore" data)]
              ["README" (render "README.md" data)]
+             ["LICENSE" (render "LICENSE" data)]
              ["test/{{nested-dirs}}_test.clj" (render "test_core.clj" data)]
              ["src/{{repl-file}}.clj" (render "repl.clj" data)]
              ["src/{{nested-dirs}}.clj" (render "core.clj" data)])))
