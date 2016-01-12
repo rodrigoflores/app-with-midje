@@ -7,7 +7,11 @@
                  [prismatic/schema "{{schema-version}}"]]
   :main ^:skip-aot {{main}}
   :target-path "target/%s"
-  :repl-options {:init-ns {{repl-ns}}}
+  :repl-options {:init-ns {{repl-ns}}
+                 :prompt (fn [ns] (str sanitized
+                                       " ["
+                                       ns
+                                       "] >"))}
   :profiles {:uberjar {:aot :all}
              :dev {:dependencies [[midje "{{midje-version}}"]]}})
 
