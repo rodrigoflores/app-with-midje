@@ -8,6 +8,7 @@
   :main ^:skip-aot {{main}}
   :target-path "target/%s"
   :repl-options {:init-ns {{repl-ns}}
+                 :welcome (println "Welcome to a Clojure REPL!\nTo run the tests: (autotest)\n")
                  :prompt (fn [ns] (str "{{sanitized}}"
                                        " ["
                                        ns
