@@ -10,6 +10,7 @@
                    :midje  "1.0.4"})
 
 (defn app-with-midje [name]
+  "an application with midje"
   (let [sanitized (name-to-path name)
         main (multi-segment sanitized)
         nested-dirs (name-to-path main)
