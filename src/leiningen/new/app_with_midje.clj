@@ -1,6 +1,6 @@
 (ns leiningen.new.app-with-midje
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files
-                                             multi-segment]]
+                                             multi-segment sanitize-ns]]
             [java-time :as jt]
             [leiningen.core.main :as main]))
 
@@ -12,11 +12,13 @@
 (defn app-with-midje [name]
   (let [sanitized (name-to-path name)
         main (multi-segment sanitized)
+        main-ns (sanitize-ns name)
         nested-dirs (name-to-path main)
         repl-ns (multi-segment sanitized "repl")
         repl-file (name-to-path repl-ns)
         data {:name name
               :sanitized sanitized
+              :main-ns main-ns
               :nested-dirs nested-dirs
               :repl-ns repl-ns
               :repl-file repl-file
