@@ -1,4 +1,4 @@
-(ns {{main}}-test
+(ns {{main-ns}}-test
     (:require [midje.sweet :refer :all]))
 
 (fact "1 is 1"
