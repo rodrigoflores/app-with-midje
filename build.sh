@@ -1,7 +1,7 @@
 #!/bin/sh
 
-rm -rf xxx
+rm -rf xxx-yyy
 lein install
 lein new app-with-midje xxx-yyy
-cd xxx
+cd xxx-yyy
 lein midje

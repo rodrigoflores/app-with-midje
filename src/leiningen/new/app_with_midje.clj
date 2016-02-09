@@ -11,9 +11,9 @@
 
 (defn app-with-midje [name]
   (let [sanitized (name-to-path name)
-        main (multi-segment sanitized)
-        main-ns (sanitize-ns name)
+        main (multi-segment sanitized "core")
         nested-dirs (name-to-path main)
+        main-ns (sanitize-ns nested-dirs)
         repl-ns (multi-segment sanitized "repl")
         repl-file (name-to-path repl-ns)
         data {:name name
