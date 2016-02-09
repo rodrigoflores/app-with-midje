@@ -14,10 +14,11 @@
         main (multi-segment sanitized "core")
         nested-dirs (name-to-path main)
         main-ns (sanitize-ns nested-dirs)
-        repl-ns (multi-segment sanitized "repl")
+        repl-ns (multi-segment (sanitize-ns sanitized) "repl")
         repl-file (name-to-path repl-ns)
         data {:name name
               :sanitized sanitized
+              :sanitized-ns (sanitize-ns sanitized)
               :main-ns main-ns
               :nested-dirs nested-dirs
               :repl-ns repl-ns
