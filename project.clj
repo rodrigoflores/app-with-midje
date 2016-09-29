@@ -4,5 +4,6 @@
   :license {:name "Apache V2"
             :url "https://www.apache.org/licenses/LICENSE-2.0.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [clojure.java-time "0.2.0"]]
+                 [clojure.java-time "0.2.0"]
+                 [clj-tuple "0.2.2"]]
   :eval-in-leiningen true)
