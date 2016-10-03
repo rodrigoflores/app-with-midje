@@ -4,9 +4,17 @@ All notable changes to this project will be documented in this file. This change
 ## [Unreleased][unreleased]
 
 ### Added
+* Using Clojure 1.8.0;
+
+## [0.2.0] - 2016-02-21
+
+### Added
 * A better prompt with namespace and project name;
 * An welcome message explaining how to run tests;
 * Travis ci build configuration
+
+### Fixed ###
+* Namespace naming with dashes (not underscores)
 
 ## [0.1.0] - 2016-01-03
 

@@ -3,7 +3,7 @@
   :url "http://example.com/FIXME"
   :license {:name "Apache V2"
             :url "https://www.apache.org/licenses/LICENSE-2.0.html"}
-  :dependencies [[org.clojure/clojure "1.7.0"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [prismatic/schema "{{schema-version}}"]]
   :main ^:skip-aot {{main-ns}}
   :target-path "target/%s"
