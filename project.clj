@@ -1,4 +1,4 @@
-(defproject app-with-midje/lein-template "0.3.0"
+(defproject app-with-midje/lein-template "0.4.0-SNAPSHOT"
   :description "Generates a Clojure app with midje and schema"
   :url "https://github.com/rodrigoflores/app-with-midje"
   :license {:name "Apache V2"
