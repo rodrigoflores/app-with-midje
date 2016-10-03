@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
-## [Unreleased][unreleased]
+## [0.3.0] - 2016-10-03
 
 ### Added
 * Using Clojure 1.8.0;
