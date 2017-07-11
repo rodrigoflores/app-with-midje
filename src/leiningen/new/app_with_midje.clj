@@ -6,8 +6,8 @@
 
 (def render (renderer "app-with-midje"))
 
-(def lib-versions {:schema "1.8.3"
-                   :midje  "1.0.4"})
+(def lib-versions {:schema "1.1.6"
+                   :midje  "1.8.3"})
 
 (defn app-with-midje [name]
   (let [sanitized (name-to-path name)
@@ -24,8 +24,8 @@
               :repl-ns repl-ns
               :repl-file repl-file
               :main main
-              :midje-version (:schema lib-versions)
-              :schema-version (:midje lib-versions)
+              :midje-version (:midje lib-versions)
+              :schema-version (:schema lib-versions)
               :year (-> (jt/local-date)
                         jt/year
                         (.getValue))}]
