@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased][unreleased]
 
+## [0.4.0] - 2017-07-11
+* Updates midje to 1.8.3;
+* Updates schema to 1.1.6;
+
 ## [0.3.0] - 2016-10-03
 
 ### Added
